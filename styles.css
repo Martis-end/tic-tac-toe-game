@@ -1,0 +1,67 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font: bold 50px Roboto, sans-serif;
+}
+
+button {
+  font-weight: 700;
+  height: 40px;
+  cursor: pointer;
+  font-size: .5em;
+  margin: 10px;
+  background-color: cyan;
+}
+
+.box {
+  min-width: 95px;
+  border: 2px solid;
+  min-height: 95px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 95px;
+  line-height: 0px;
+  background-color: cyan;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  flex-direction: column;
+  text-align: center;
+  font-size: .6em;
+}
+
+.hide {
+  display: none;
+}
+
+.box0 {--animate-duration: .2s;}
+.box1 {--animate-duration: .4s;}
+.box2 {--animate-duration: .6s;}
+.box3 {--animate-duration: .8s;}
+.box4 {--animate-duration: 1s;}
+.box5 {--animate-duration: 1.2s;}
+.box6 {--animate-duration: 1.4s;}
+.box7 {--animate-duration: 1.6s;}
+.box8 {--animate-duration: 1.8s;}
+.box span {--animate-duration: .5s;}
+.greating {--animate-duration: 2s;}
+
+.winerColor {
+  background-color: red;
+}
+
+.congratuletion {
+  color: red;
+}

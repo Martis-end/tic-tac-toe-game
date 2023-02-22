@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Игра крестики-нолики</title>
+  <link rel="icon" href="./tic_tac_toe_icon.png" type="image/png" sizes="48*48" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="animate.min.css" />
+</head>
+
+<body>
+  <div class="fild">
+    <div class="row info">
+      <div class="greating animate__animated animate__flip">Добро пожаловать в игру!</div>
+      <div class="tur"></div>
+      <button id="update" class="hide" onclick="location.reload()">Начать занаво</button>
+    </div>
+    <div class="row">
+      <div id="0" class="box box0 animate__animated animate__zoomIn"></div>
+      <div id="1" class="box box1 animate__animated animate__zoomIn"></div>
+      <div id="2" class="box box2 animate__animated animate__zoomIn"></div>
+    </div>
+    <div class="row">
+      <div id="3" class="box box3 animate__animated animate__zoomIn"></div>
+      <div id="4" class="box box4 animate__animated animate__zoomIn"></div>
+      <div id="5" class="box box5 animate__animated animate__zoomIn"></div>
+    </div>
+    <div class="row">
+      <div id="6" class="box box6 animate__animated animate__zoomIn"></div>
+      <div id="7" class="box box7 animate__animated animate__zoomIn"></div>
+      <div id="8" class="box box8 animate__animated animate__zoomIn"></div>
+    </div>
+  </div>
+  <script src="./scrpt.js"></script>
+</body>
+
+</html>

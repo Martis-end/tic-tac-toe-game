@@ -28,7 +28,7 @@ function checkWin(event) {
 };
 
 function checkFinal() {
-    (winer || !move == 9) ? congratuletion()
+    (winer || !move == 9) ? congratuletion() : gamerFullName()
     (winer || move == 9) ? changeGamer() : congratuletion()
     (!winer && move !== 9) ? currentTur.innerHTML = `<span class="animate__animated animate__fadeIn">${fullName}, ваш ход</span>` : gamerFullName()
     (!winer && move == 9) ? currentTur.innerHTML = `<div class="congratuletion animate__animated animate__flip">! НИЧЬЯ !</div>` : gamerFullName()

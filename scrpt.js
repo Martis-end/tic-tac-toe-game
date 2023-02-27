@@ -28,10 +28,10 @@ function checkWin(event) {
 };
 
 function checkFinal() {
-    (winer || !move == 9) ? congratuletion() : gamerFullName()
-    (winer || move == 9) ? changeGamer() : congratuletion()
-    (!winer && move !== 9) ? currentTur.innerHTML = `<span class="animate__animated animate__fadeIn">${fullName}, ваш ход</span>` : gamerFullName()
-    (!winer && move == 9) ? currentTur.innerHTML = `<div class="congratuletion animate__animated animate__flip">! НИЧЬЯ !</div>` : gamerFullName()
+    if (winer || !move == 9) {congratuletion();};
+    if (winer && move == 9) {changeGamer();congratuletion();};
+    if (!winer && move !== 9) {currentTur.innerHTML = `<span class="animate__animated animate__fadeIn">${fullName}, ваш ход</span>`};
+    if (!winer && move == 9) {draw();};
 };
 
 function gamerFullName() { gamer === 'X' ? fullName = 'Крестики' : fullName = 'Нолики' };
@@ -61,9 +61,16 @@ function checkDiagonals() {
 
 function fixWiner(winArray) {
     winer = true;
+    changeGamer();
     for (let i of winArray) {
         document.querySelector(`.box${i}`).classList.add("winerColor");
     }
+};
+
+function draw() {
+    currentTur.innerHTML = `<div class="congratuletion animate__animated animate__flip">! НИЧЬЯ !</div>`;
+    document.querySelector("#update").classList.remove("hide");
+    box.removeEventListener('click', checkWin);
 };
 
 function congratuletion() {
